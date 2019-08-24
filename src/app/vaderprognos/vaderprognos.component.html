@@ -1,0 +1,13 @@
+<body>
+  <h1>VäderApp</h1>
+
+  <div id="sökruta">
+      <input type="text" name="search" id="search" list="stadListor" placeholder="Sök stad" [(ngModel)]="letaStad" />
+
+      <button (click)="letaStader()">Sök</button>
+  </div>
+
+  <datalist id="stadListor" *ngIf="stadLista"> 
+    <option *ngFor="let stad of stadLista">{{stad.nm}} </option>   
+</datalist>
+</body>
